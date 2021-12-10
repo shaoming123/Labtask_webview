@@ -1,0 +1,206 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+
+    html {
+        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p{
+       text-align: justify;
+    text-justify: inter-word;
+    }
+
+
+
+    .bg-image {
+ 
+  background-image: url("images/cover.jpg");
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  .input{
+    background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 2px solid #f1f1f1;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 15px;
+  text-align: center;
+ 
+    
+  }
+ 
+    </style>
+
+  
+  </head>
+  <body>
+   
+    <div class="bg-image"></div>
+       
+      <div class="wrap">
+       <div class="input">
+          <p id="result" style="font-weight:bold; font-size: 20px;">Welcome ! <p>
+            <div class="input-group">
+          <input type="text" id="name" class="form-control" oninput="sendName()" placeholder="Please Enter Your Name" />
+        </div>
+         </div>
+     </div>
+   
+    
+
+    <div class="section">
+    <div class="container my-5">
+     
+    <div class="row">
+      <h4>5 place I wish to go after MCO</h4>
+      <div class="col-lg-3 mb-4">
+     
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="images/azores.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">The Azores, Portugal</h5>
+            <p class="about card-text">
+            Roughly 900 miles off the coast of Lisbon, this Portuguese archipelago stimulate my desire to travel. The verdant valleys, steep ocean-side cliffs, rows of blue hydrangeas, and scattering of waterfalls make the Azores a paradise worth exploring.
+            </p>
+            <a href="azores_page.html" class="btn btn-primary">More details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4">
+        <div class="card" >
+          <img
+            class="card-img-top"
+            src="images/fuji.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Mount Fuji, Japan</h5>
+            <p class="card-text">
+         Mount Fuji, Japan, is one of the most famous mountains in the world. Mount Fuji is a composite cone, or stratovolcano. Composite cones, formed by violent eruptions, have layers of rock, ash, and lava
+            </p>
+            <a href="fuji_page.html" class="btn btn-primary">More details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="images/ampat.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Raja Ampat Islands, Indonesia</h5>
+            <p class="card-text">
+           Raja Ampat is a chain of some 1,500 islands off the western coast of West Papua. The views here are downright prehistoric: jagged lava peaks clad in green jungle; palms sprouting out of sheer cliff walls; mist drifting in and out of deep canyons. 
+            </p>
+            <a href="ampat_page.html" class="btn btn-primary">More details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 mb-4">
+        <div class="card" >
+          <img
+            class="card-img-top"
+            src="images/svalbard.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Svalbard, Norway</h5>
+            <p class="card-text">
+           Svalbard, the northern archipelago off the coast of Norway, is known for spectacular Northern Lights viewing opportunities. The sky is pitch black all day and night October through February, due to its position within the Arctic Circle. Svalbard is also known for its wildlife, including polar bears and arctic foxes.
+
+
+            </p>
+            <a
+              href="svalbard.html"
+              class="btn btn-primary"
+              >More details</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 mb-4">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="images/zakynthos.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Zakynthos, Greece</h5>
+            <p class="card-text">
+              Zakynthos has some of the most beautiful beaches in the Greek Isles namely, Navagio Beach. Sheltered by cliffs, Navagio is only accessible by boat, and draws its name (“Shipwreck”) from a freighter that ran aground, was abandoned, and still rests in the beach’s white sands today.
+            </p>
+            <a href="zakynthos_page.html" class="btn btn-primary"
+              >More dtails</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+<div>
+   
+    <script>
+      function sendName() {
+        var x = document.getElementById("name").value;
+        var results = document.getElementById("result");
+        results.innerHTML = "Welcome !    " + x;
+      }
+    </script>
+
+  
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
